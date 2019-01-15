@@ -51,7 +51,7 @@ public class TimeShared extends Function {
 
             // 5.0: Create Cloudlets
             cloudletList = new ArrayList<Cloudlet>();
-            int no_of_cloudlet = 68;
+            int no_of_cloudlet = 178;
 
             // Cloudlet characteristics
             long length = 40000; // cloudlet length (40,000 MIPS)
@@ -75,9 +75,9 @@ public class TimeShared extends Function {
 
             // 7.0: Print results when simulation is over
             List<Cloudlet> finalCloudletExecutionResults = broker.getCloudletReceivedList();
-            printCloudletList(finalCloudletExecutionResults);
+            printCloudletList(finalCloudletExecutionResults, no_of_cloudlet, bw, ram ,length, mips);
 
-            Log.printLine("Smart Grid simulation finished!");
+            Log.printLine("\nSmart Grid simulation finished!");
         } catch (Exception e) {
             e.printStackTrace();
             Log.printLine("Unwanted errors happen");
